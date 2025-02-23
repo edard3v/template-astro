@@ -1,5 +1,10 @@
-<script>
-  import { ROUTER } from "./router";
+---
+import Layout from "@layouts/Layout/Layout.astro";
+import { ROUTER } from "./router";
+---
 
-  location.href = ROUTER.home.href;
-</script>
+<Layout title={ROUTER.index.display}>
+  <main>
+    <h1>¡Hola mundo!</h1>
+  </main>
+</Layout>
