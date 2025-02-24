@@ -14,13 +14,19 @@ const { class: cls, ...rest } = Astro.props;
   button {
     padding: var(--md) var(--xl);
     border-radius: var(--md);
-    background-color: var(--bg-surf);
+    background-color: var(--bg_surf);
     border: var(--border);
     color: var(--white);
     transition: background-color 0.7s;
 
     &:hover:not(:disabled) {
       outline: 3px solid var(--primary);
+    }
+
+    &:disabled {
+      background-color: transparent;
+      color: var(--grey);
+      cursor: not-allowed;
     }
   }
 </style>
