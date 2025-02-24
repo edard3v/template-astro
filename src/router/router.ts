@@ -1,10 +1,10 @@
 export const ROUTER = {
-  index: {
+  home: {
     href: "/",
     display: "Inicio",
   },
 
-  contacto: {
+  contact: {
     href: "/contacto/",
     display: "Contacto",
   },

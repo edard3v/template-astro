@@ -8,35 +8,48 @@ import Footer from "@components/shared/Footer/Footer.astro";
 
 interface Props {
   title: string;
+  description?: string;
+  keywords?: string[];
+  img?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = SEO.description,
+  keywords = SEO.keywords,
+  img = SEO.img,
+} = Astro.props;
+
+const keywords_parsed = keywords.join(",");
 ---
 
-<html lang="es">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-
-    <!-- SEO -->
-    <meta name="robots" content="index, follow" />
-    <meta name="description" content={SEO.description} />
-    <meta name="author" content={SEO.author} />
-    <meta name="language" content="es" />
-    <meta name="robots" content="index, follow" />
-    <meta name="keywords" content={SEO.keywords} />
-
-    <!--OG Metatags -->
-    <meta property="og:title" content={title} />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:description" content={SEO.description} />
-    <meta property="og:image" content={SEO.img} />
-
     <title>{title}</title>
     <ClientRouter />
+
+    <!-- SEO Básico -->
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords_parsed} />
+    <meta name="author" content={SEO.author} />
+
+    <!-- Open Graph (Para compartir en redes sociales como Facebook) -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={img} />
+    <meta property="og:url" content={SEO.base_url} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards (Para compartir en Twitter/X) -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={img} />
   </head>
   <body>
     <Header />
@@ -52,7 +65,7 @@ const { title } = Astro.props;
   }
 
   body {
-    background-color: var(--bg-main);
+    background-color: var(--bg_main);
     color: var(--paras);
 
     display: grid;
