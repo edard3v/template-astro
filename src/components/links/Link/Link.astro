@@ -6,8 +6,6 @@ interface Props extends HTMLAttributes<"a"> {}
 const { class: cls, href, ...rest } = Astro.props;
 const pathname = Astro.url.pathname;
 const is_active = pathname === href;
-
-console.log(pathname, href);
 ---
 
 <a {...rest} href={href} class:list={["link", { is_active }, cls]}>
