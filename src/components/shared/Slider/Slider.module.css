@@ -14,18 +14,19 @@
   .next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+
     color: inherit;
     background-color: transparent;
-    line-height: 1rem;
     font-size: 2rem;
   }
 
   .prev {
     left: 0;
+    transform: translateY(-50%) rotate(180deg);
   }
 
   .next {
     right: 0;
+    transform: translateY(-50%);
   }
 }

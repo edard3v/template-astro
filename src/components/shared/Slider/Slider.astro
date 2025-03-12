@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import css from "./Slider.module.css";
 ---
 
@@ -7,8 +8,8 @@ import css from "./Slider.module.css";
   <div class:list={["keen-slider__slide", css.slide]}>2</div>
   <div class:list={["keen-slider__slide", css.slide]}>3</div>
 
-  <button id="ks_prev" class={css.prev}>🠘</button>
-  <button id="ks_next" class={css.next}>🠚</button>
+  <button id="ks_prev" class={css.prev}><Icon name={"arrow"} /></button>
+  <button id="ks_next" class={css.next}><Icon name={"arrow"} /></button>
 </div>
 
 <script>
