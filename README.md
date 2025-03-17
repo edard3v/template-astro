@@ -1,6 +1,6 @@
 # Template Astro hecho por edard3v
 
-- Uso screamming. Por ende pages se limita a crear las rutas y views se encarga de encapsular lo que corresponde en c/u
+- Uso screamming. Por ende pages se limita a crear rutas y views se encarga de encapsular lo que corresponde en c/u.
 
 - Actualizar todas las dependencias sin respetar las restricciones de versión en package.json
 

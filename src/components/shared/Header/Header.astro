@@ -1,12 +1,13 @@
 ---
+import { INDEX } from "@views/IndexView/config";
 import css from "./Header.module.css";
 import Link from "@components/links/Link/Link.astro";
-import { ROUTER } from "@router/router";
+import { CONTACTO } from "@views/ContactoView/config";
 ---
 
 <header class={css.header}>
   <nav>
-    <Link href={ROUTER.home.href}>{ROUTER.home.display}</Link>
-    <Link href={ROUTER.contact.href}>{ROUTER.contact.display}</Link>
+    <Link href={INDEX.href}>{INDEX.display}</Link>
+    <Link href={CONTACTO.href}>{CONTACTO.display}</Link>
   </nav>
 </header>
