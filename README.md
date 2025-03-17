@@ -30,7 +30,7 @@ bun update --latest
 bun i -E nanostores
 ```
 
-- Felte (Gestión de forms)
+- Felte (Gestión de forms) https://felte.dev/docs
 
 ```
 bun i -E felte
