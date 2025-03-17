@@ -13,11 +13,13 @@ import css from "./Slider.module.css";
 </div>
 
 <script>
-  import { Dom } from "@utils/dom/dom";
+  import { dom } from "@utils/dom/dom";
   import KeenSlider from "keen-slider";
 
   document.addEventListener("astro:page-load", () => {
-    const ks = Dom.select("ks");
+    const { select } = dom();
+    const ks = select("ks");
+
     if (!ks) return;
 
     requestAnimationFrame(() => {
@@ -32,8 +34,8 @@ import css from "./Slider.module.css";
       slideChanged: (_slider) => {}, // se ejecuta cada que cambia diapo
     });
 
-    const prev = Dom.select("ks_prev");
-    const next = Dom.select("ks_next");
+    const prev = select("ks_prev");
+    const next = select("ks_next");
 
     prev?.addEventListener("click", () => {
       slider.prev();
