@@ -10,6 +10,13 @@ bun update --latest
 
 - TanStackQuery con:
 
+  - Solidjs
+
+    ```
+    bun i -E -D @tanstack/solid-query-devtools
+    bun i -E @tanstack/solid-query @tanstack/query-sync-storage-persister @tanstack/solid-query-persist-client
+    ```
+
   - React
 
     ```
@@ -28,13 +35,6 @@ bun update --latest
 
 ```
 bun i -E nanostores
-```
-
-- Felte (Gestión de forms) https://felte.dev/docs
-
-```
-bun i -E felte
-bun i -E @felte/validator-zod
 ```
 
 - lite-youtube
