@@ -1,19 +1,10 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import logo from "./notaku.png";
+import { Icon } from "astro-icon/components";
 
-interface Props extends HTMLAttributes<"picture"> {}
+interface Props extends HTMLAttributes<"svg"> {}
 
-const { class: cls, ...rest } = Astro.props;
+const { class: cls, width, height, ...rest } = Astro.props;
 ---
 
-<picture {...rest} class:list={["logo", cls]}>
-  <img src={logo.src} alt="logo" />
-</picture>
-
-<style>
-  .logo {
-    max-width: 65px;
-    overflow: hidden;
-  }
-</style>
+<Icon {...rest} name={"pet"} width={width ?? 35} height={height ?? 35} class:list={["logo", cls]} />

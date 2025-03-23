@@ -10,6 +10,7 @@
       "@services/*": ["./src/services/*"],
       "@utils/*": ["./src/utils/*"],
       "@styles/*": ["./src/styles/*"],
+      "@solid/*": ["./src/solid/*"],
       "@views/*": ["./src/views/*"]
     }
   }
