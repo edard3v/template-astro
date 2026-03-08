@@ -7,4 +7,10 @@ interface Props extends HTMLAttributes<"svg"> {}
 const { class: cls, width, height, ...rest } = Astro.props;
 ---
 
-<Icon {...rest} name={"pet"} width={width ?? 35} height={height ?? 35} class:list={["logo", cls]} />
+<Icon
+  {...rest}
+  name={"astro"}
+  width={width ?? 35}
+  height={height ?? 35}
+  class:list={["logo", cls]}
+/>
